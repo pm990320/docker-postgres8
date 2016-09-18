@@ -9,10 +9,7 @@ RUN gunzip postgresql-8.0.2.tar.gz && tar xf postgresql-8.0.2.tar
 
 WORKDIR /usr/local/postgres-install/postgresql-8.0.2
 
-RUN ./configure && make && make install
-
-RUN adduser postgres && mkdir /usr/local/pgsql/data && chown postgres /usr/local/pgsql/data
-
+RUN ./configure && make && make install && adduser postgres && mkdir /usr/local/pgsql/data && chown postgres /usr/local/pgsql/data
 
 COPY ./docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh && chown postgres /docker-entrypoint.sh
