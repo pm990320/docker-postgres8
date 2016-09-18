@@ -25,9 +25,6 @@ RUN ./initdb -D ./../data
 COPY ./postgresql.conf /usr/local/pgsql/data
 COPY ./pg_hba.conf /usr/local/pgsql/data
 
-ENV POSTGRES_DATABASE docker
-ENV POSTGRES_USER docker
-ENV POSTGRES_PASSWORD docker
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ./postmaster -D ./../data
