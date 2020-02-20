@@ -28,6 +28,3 @@ Copy this snippet into your docker-compose.yml file:
 Alternatively, run this command to run the container:
 
     docker run -p 5432:5432 -e POSTGRES_USER=docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DATABASE=docker pm990320/docker-postgres8:8.0.2
-
-
-Please contact patrickmenlove@hotmail.co.uk with any questions/comments.
